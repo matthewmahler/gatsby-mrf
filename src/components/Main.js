@@ -83,7 +83,7 @@ class Main extends React.Component {
                       <div key={i}>
                         <iframe
                           className="post"
-                          src={`http://instagram.com/p/${edge.node.id}/embed`}
+                          src={`https://instagram.com/p/${edge.node.id}/embed`}
                           frameborder="0"
                         />
                       </div>
