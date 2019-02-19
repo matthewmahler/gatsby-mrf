@@ -71,27 +71,25 @@ class Main extends React.Component {
           <br />
           <StaticQuery
             query={query}
-            render={data =>
-              console.log(data) || (
-                <div>
-                  <Carousel
-                    showThumbs={false}
-                    showArrows={true}
-                    dynamicHeight={true}
-                  >
-                    {data.allInstaNode.edges.map((edge, i) => (
-                      <div key={i}>
-                        <iframe
-                          className="post"
-                          src={`https://instagram.com/p/${edge.node.id}/embed`}
-                          frameborder="0"
-                        />
-                      </div>
-                    ))}
-                  </Carousel>
-                </div>
-              )
-            }
+            render={data => (
+              <div>
+                <Carousel
+                  showThumbs={false}
+                  showArrows={true}
+                  dynamicHeight={true}
+                >
+                  {data.allInstaNode.edges.map((edge, i) => (
+                    <div key={i}>
+                      <iframe
+                        className="post"
+                        src={`https://instagram.com/p/${edge.node.id}/embed`}
+                        frameborder="0"
+                      />
+                    </div>
+                  ))}
+                </Carousel>
+              </div>
+            )}
           />
 
           {close}
