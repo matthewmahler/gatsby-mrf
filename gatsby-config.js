@@ -1,24 +1,40 @@
+const path = require(`path`)
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Starter - Dimension V2",
-    author: "Hunter Chang",
-    description: "A Gatsby.js V2 Starter based on Dimension by HTML5 UP"
+    title: 'My Rising Fall',
+    author: 'Matt Mahler',
+    description: 'Album Out 4/20/69',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'My-Rising-Fall',
+        short_name: 'MRF',
         start_url: '/',
         background_color: '#663399',
         theme_color: '#663399',
         display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+        icon: 'src/images/mrf-icon.png', // This path is relative to the root of the site.
       },
     },
     'gatsby-plugin-sass',
-    'gatsby-plugin-offline'
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `src`, `images`),
+      },
+    },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        username: `myrisingfallsucks`,
+      },
+    },
+    'gatsby-plugin-offline',
   ],
 }
