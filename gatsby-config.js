@@ -3,7 +3,7 @@ module.exports = {
   siteMetadata: {
     title: 'My Rising Fall',
     author: 'Matt Mahler',
-    description: 'Album Out 4/20/69',
+    description: 'Album Out Summer 2019',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

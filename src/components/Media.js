@@ -1,6 +1,7 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
+
 const query = graphql`
   query {
     allInstaNode {
