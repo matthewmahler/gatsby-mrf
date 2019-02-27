@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import About from './About'
-import Contact from './contact'
+import Contact from './Contact'
 import Media from './Media'
 import Music from './Music'
 
