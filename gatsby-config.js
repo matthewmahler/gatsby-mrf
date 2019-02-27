@@ -30,9 +30,9 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {
-      resolve: `gatsby-source-instagram`,
+      resolve: `gatsby-source-instagram-all`,
       options: {
-        username: `myrisingfallsucks`,
+        access_token: '1424456392.1677ed0.2e4f1ad1a7c44b0581a1cdf8659a2abf',
       },
     },
     'gatsby-plugin-offline',

@@ -8,7 +8,6 @@ const Music = () => {
       <iframe
         title="spotify player"
         src="https://open.spotify.com/embed/artist/6Yrv6ZL411qrv2uboAmyAK"
-        allowTransparency="true"
         allow="encrypted-media"
         className="player"
       />

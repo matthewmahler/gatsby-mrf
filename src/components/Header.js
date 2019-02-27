@@ -52,10 +52,10 @@ const Header = props => (
           <a
             href="javascript:;"
             onClick={() => {
-              props.onOpenArticle('social')
+              props.onOpenArticle('contact')
             }}
           >
-            Social
+            contact
           </a>
         </li>
       </ul>

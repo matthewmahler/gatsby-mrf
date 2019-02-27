@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import About from './About'
-import Social from './Social'
+import Contact from './contact'
 import Media from './Media'
 import Music from './Music'
 
@@ -57,13 +57,13 @@ class Main extends React.Component {
         </article>
 
         <article
-          id="social"
-          className={`${this.props.article === 'social' ? 'active' : ''} ${
+          id="contact"
+          className={`${this.props.article === 'contact' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
           }`}
           style={{ display: 'none' }}
         >
-          <Social />
+          <Contact />
           {close}
         </article>
       </div>
