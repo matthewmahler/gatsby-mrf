@@ -12,7 +12,7 @@ const Header = props => (
         <h1>My Rising Fall</h1>
         <h2>
           The Hate You Hold EP <br />
-          Available <span>4/20/69</span>
+          Available <span>Summer 2019</span>
         </h2>
       </div>
     </div>
