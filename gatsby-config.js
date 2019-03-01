@@ -13,8 +13,8 @@ module.exports = {
         name: 'My-Rising-Fall',
         short_name: 'MRF',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#111111',
+        theme_color: '#111111',
         display: 'minimal-ui',
         icon: 'src/images/mrf-icon.png', // This path is relative to the root of the site.
       },
