@@ -1,4 +1,13 @@
 const path = require(`path`)
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
+console.log(
+  process.env.CONTENTFUL_SPACE_ID,
+  process.env.CONTENTFUL_ACCESS_TOKEN
+)
+
 module.exports = {
   siteMetadata: {
     title: 'My Rising Fall',
@@ -25,6 +34,14 @@ module.exports = {
       options: {
         name: `images`,
         path: path.join(__dirname, `src`, `images`),
+      },
+    },
+    {
+      resolve: 'gatsby-source-contentful',
+      options: {
+        spaceId: '2wsyc8pcn7li',
+        accessToken:
+          '73ff934d37b35f39e372959fdd76e64206351bbdce0b7ae56eac34d29276cdd0',
       },
     },
     `gatsby-plugin-sharp`,

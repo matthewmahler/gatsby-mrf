@@ -1,62 +1,49 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import icon from '../images/mrf-icon.png'
 
 const Header = props => (
   <header id="header" style={props.timeout ? { display: 'none' } : {}}>
     <div className="logo">
-      <img src={icon} className="icon" />
+      <img src={props.icon} className="icon" alt="icon" />
     </div>
     <div className="content">
       <div className="inner">
-        <h1>My Rising Fall</h1>
+        <h1>{props.title}</h1>
         <h2>
-          The Hate You Hold EP <br />
-          Available <span>Summer 2019</span>
+          {props.subtitle} <br />
+          <span>{props.callToAction}</span>
         </h2>
       </div>
     </div>
     <nav>
       <ul>
-        <li>
-          <a
-            href="javascript:;"
-            onClick={() => {
-              props.onOpenArticle('music')
-            }}
-          >
-            Music
-          </a>
+        <li
+          onClick={() => {
+            props.onOpenArticle('music')
+          }}
+        >
+          Music
         </li>
-        <li>
-          <a
-            href="javascript:;"
-            onClick={() => {
-              props.onOpenArticle('media')
-            }}
-          >
-            Media
-          </a>
+        <li
+          onClick={() => {
+            props.onOpenArticle('media')
+          }}
+        >
+          Media
         </li>
-        <li>
-          <a
-            href="javascript:;"
-            onClick={() => {
-              props.onOpenArticle('about')
-            }}
-          >
-            About
-          </a>
+        <li
+          onClick={() => {
+            props.onOpenArticle('about')
+          }}
+        >
+          About
         </li>
-        <li>
-          <a
-            href="javascript:;"
-            onClick={() => {
-              props.onOpenArticle('contact')
-            }}
-          >
-            contact
-          </a>
+        <li
+          onClick={() => {
+            props.onOpenArticle('contact')
+          }}
+        >
+          contact
         </li>
       </ul>
     </nav>

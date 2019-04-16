@@ -1,17 +1,30 @@
 import React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
 
 const Music = () => {
+  const query = graphql`
+    query {
+      contentfulPage {
+        spotifyUrl
+      }
+    }
+  `
   return (
-    <div>
-      <h2 className="major">music</h2>
+    <StaticQuery
+      query={query}
+      render={data => (
+        <div>
+          <h2 className="major">music</h2>
 
-      <iframe
-        title="spotify player"
-        src="https://open.spotify.com/embed/artist/6Yrv6ZL411qrv2uboAmyAK"
-        allow="encrypted-media"
-        className="player"
-      />
-    </div>
+          <iframe
+            title="spotify player"
+            src={data.contentfulPage.spotifyUrl}
+            allow="encrypted-media"
+            className="player"
+          />
+        </div>
+      )}
+    />
   )
 }
 

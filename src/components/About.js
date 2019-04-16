@@ -1,19 +1,28 @@
 import React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
 
 const About = () => {
+  const query = graphql`
+    query {
+      contentfulPage {
+        aboutUs {
+          aboutUs
+        }
+      }
+    }
+  `
   return (
-    <div>
-      <h2 className="major">About</h2>
-      <div>
-        <p>
-          My Rising Fall is a pop punk/melodic hardcore band based out of
-          central NJ. Our upcoming EP "The Hate You Hold" is the result of hard
-          work and experiences over the past 5 years (we wrote it in 5 days).
-          Over that period of time, we have evolved our sound into what we feel
-          is the best representation of ourselves and our musical influences.
-        </p>
-      </div>
-    </div>
+    <StaticQuery
+      query={query}
+      render={data => (
+        <div>
+          <h2 className="major">About</h2>
+          <div>
+            <p>{data.contentfulPage.aboutUs.aboutUs}</p>
+          </div>
+        </div>
+      )}
+    />
   )
 }
 
