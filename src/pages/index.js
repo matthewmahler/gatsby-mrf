@@ -1,6 +1,5 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-
 import Layout from '../components/layout'
 import Header from '../components/Header'
 import Main from '../components/Main'
